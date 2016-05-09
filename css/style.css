@@ -1,0 +1,78 @@
+body{
+  background-color: #fbeedb;
+}
+
+.container{
+  margin: 0 auto;
+  width: 80%;
+}
+
+h1{
+  display: inline;  
+}
+
+nav{
+  margin: 0 auto;
+  padding: 0;
+  float: right;
+  /*display: inline;
+  clear: both;*/
+}
+
+img{
+  float: left;
+  display: block;
+  margin: 0 1.5vw 3vw 0;
+  max-width: 100%;
+}
+
+section{
+  display: block;
+  height: 100%;
+  float: right;
+}
+
+p{
+  font-family: 'Quattrocento';
+}
+
+h1, h2, h3, h4, h5, h6, a, ul, li{
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+}
+
+h2{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover{
+  color: red;
+}
+
+a:active{
+  color: maroon;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+  display: inline;
+  padding: .2em;
+}
+
+footer{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 9pt;
+}
