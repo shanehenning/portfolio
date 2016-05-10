@@ -1,0 +1,180 @@
+body{
+  background-color: #fbeedb;
+  min-width: 350px;
+  margin: 0;
+  width: 90%;
+  overflow-x: hidden;
+}
+
+#container{
+  z-index: 5;
+  background-color: #fbeedb;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100%;
+  position: relative;
+}
+
+/*header h1{
+  color: #fbeedb;
+}*/
+
+h1{
+  position: relative;
+  left: 40px;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+input{
+  float: right;
+  display: none;
+}
+
+header li{
+  position: relative;
+  top:17px;
+  color: black;
+}
+
+nav{
+  /*margin: 0 auto;*/
+  padding: 0;
+  float: right;
+  display: inline;
+  /*clear: both;*/
+  z-index: 25;
+  /*background-color: blue;*/
+  position: relative;
+  width: auto;
+  height: 50px;
+  padding-right: 5%;
+}
+
+img{
+  float: left;
+  display: block;
+  margin: 0 1.5vw 3vw 0;
+  max-width: 100%;
+}
+
+.head{
+  position: absolute;
+  /*background-image: url("../img/hamburgler.png");*/
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  margin-left: -3px;
+  /*cursor: pointer;*/
+  z-index: 10;
+  display: block;
+}
+
+section{
+  display: block;
+  height: 100%;
+  float: right;
+}
+
+p{
+  font-family: 'Quattrocento';
+}
+
+h1, h2, h3, h4, h5, h6, a, ul, li{
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+color: black;
+}
+
+h2{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+li:hover{
+  color: red;
+}
+
+li:active{
+  color: maroon;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+  display: inline;
+  padding: .2em;
+}
+
+footer{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 9pt;
+}
+
+
+input[type=checkbox] + label{
+  position: absolute;
+  background-image: url("../img/hamburgler.png");
+  background-size: contain;
+  height: 16px;
+  width: 22.61px;
+  margin-top: 19px;
+  margin-right: 1vw;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+}
+
+@media only screen and (max-width: 700px){
+  nav{
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    width: 15%;
+    min-width: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  nav li{
+    color: #fbeedb;
+  }
+
+  input[type=checkbox] + label{
+    display: block;
+  }
+
+  .head{
+    display: none;
+  }
+
+  #container{
+    min-width: 100%;
+    height: 100%;
+    background-color: #fbeedb;
+    z-index: 5;
+  }
+
+  .menu + label, #container {
+    transition: 1s ease;
+  }
+
+  .move{
+    transform:translateX(95px);
+    transition: 1s ease;
+  }
+}
