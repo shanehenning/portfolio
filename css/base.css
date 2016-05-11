@@ -1,0 +1,38 @@
+body{
+  background-color: #fbeedb;
+  min-width: 350px;
+  margin: 0;
+  width: 95%;
+  overflow-x: hidden;
+}
+
+.clear{
+  clear: both;
+}
+
+p{
+  font-family: 'Quattrocento';
+}
+
+h1, h2, h3, h4, h5, h6, a, ul, li{
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+color: black;
+}
+
+h2{
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+article{
+  display: block;
+  height: 100%;
+  float: left;
+}
