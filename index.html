@@ -9,6 +9,16 @@
     <link rel="stylesheet" type="text/css" href="css/module.css">
     <link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,300' rel='stylesheet' type='text/css'>
+    <script id="new-project-template" type="text/x-handlebars-template">
+      <article class="project-template clear" data-category="{{}}">
+        <h2 class="{{project-name}}">Project Name</h2>
+        <a class="link" href="{{}}">{{}}</a>
+        <h5 class="{{project-date}}">{{project-date}}</h5>
+        <img src="{{}}"></img>
+        <p>{{Description}}</p>
+        <a>Show more>></a>
+      </article>
+    </script>
   </head>
   <body>
       <header>
@@ -59,6 +69,7 @@
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="js/projectData.js"></script>
     <script src="js/project.js"></script>
     <script src="js/projectSelector.js"></script>

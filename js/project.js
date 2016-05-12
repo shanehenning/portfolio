@@ -25,6 +25,8 @@ function Project(details){
   this.link = details.link;
   this.category = details.category;
   this.description = details.description;
+
+  // for(key in details) this[key] = details[key];
 }
 
 Project.prototype.printToPage = function(){
