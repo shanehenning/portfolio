@@ -6,6 +6,15 @@ body{
   overflow-x: hidden;
 }
 
+input, select{
+  border: solid 1px black;
+  display:inline;
+}
+
+h3{
+  border: solid 1px black;
+}
+
 .clear{
   clear: both;
 }
@@ -14,7 +23,7 @@ p{
   font-family: 'Quattrocento';
 }
 
-h1, h2, h3, h4, h5, h6, a, ul, li{
+h1, h2, h3, h4, h5, h6, a, ul, li, label{
 font-family: 'Poppins', sans-serif;
 font-weight: 400;
 color: black;
