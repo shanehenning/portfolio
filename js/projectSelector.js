@@ -1,13 +1,5 @@
 var projectSelector = {};
 
-projectSelector.populateFilter = function(){
-  $('article').each(function(art){
-    var $projectCategory = $('article').eq(art).attr('data-category');
-    var optionValue = '<option value="' + $projectCategory + '">' + $projectCategory + '</option>';
-    $('.select-option').append(optionValue);
-  });
-};
-
 projectSelector.handleCategory = function(){
   $('.select-option').on('change', function(){
     var $projectsListed = $('article');
@@ -26,18 +18,17 @@ projectSelector.handleCategory = function(){
 };
 
 projectSelector.showMore = function(){
-  $('.home p:nth-of-type(n+2)').hide();
+  $('.home p:nth-of-type(n+3)').hide();
   $('article').on('click', 'a', function(){
     $(this).parent().find('*').show();
     $(this).hide();
   });
-  //stretch hide it again
 };
 
 projectSelector.oneTab = function(){
   $('.navi').on('click', 'a', function(e){
-    $('section').hide();
     e.preventDefault();
+    $('section').hide();
     var link = $(this).attr('href');
     $('section').each(function(){
       if(link === $(this).attr('class')){
@@ -49,7 +40,6 @@ projectSelector.oneTab = function(){
 };
 
 $(document).ready(function(){
-  projectSelector.populateFilter();
   projectSelector.handleCategory();
   projectSelector.showMore();
   projectSelector.oneTab();

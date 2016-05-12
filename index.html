@@ -9,6 +9,19 @@
     <link rel="stylesheet" type="text/css" href="css/module.css">
     <link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Poppins:400,300' rel='stylesheet' type='text/css'>
+    <script id="new-project-template" type="text/x-handlebars-template">
+      <article class="clear" data-category="{{category}}">
+        <h2 class="{{projectName}}">{{projectName}}</h2>
+        <a href="{{link}}">{{link}}</a>
+        <!-- <h5 class="{{projectDate}}">{{projectDate}}</h5> -->
+        <img src="{{image}}"></img>
+        <p>{{{description}}}</p>
+        <a>Show more>></a>
+      </article>
+    </script>
+    <script id="select-template" type="text/x-handlebars-template">
+      <option value ="{{category}}">{{category}}</option>
+    </script>
   </head>
   <body>
       <header>
@@ -36,16 +49,8 @@
               <option value =""> -- Select a Category -- </option>
             </select>
           </div>
-          <div class="article-location">
+          <div class="project-location">
           </div>
-          <article class="project-template clear" data-category="">
-            <h2 class="project-name">Project Name</h2>
-            <a class="link" href="">Link</a>
-            <h5 class="project-date">Project Date</h5>
-            <img src=""></img>
-            <p>Description</p>
-            <a>Show more>></a>
-          </article>
         </section>
         <section class="about">
           <h2>About Me</h2>
@@ -59,8 +64,10 @@
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="js/projectData.js"></script>
     <script src="js/project.js"></script>
+    <script src="js/hamburger.js"></script>
     <script src="js/projectSelector.js"></script>
   </body>
 </html>
