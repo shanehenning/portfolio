@@ -7,12 +7,7 @@ body{
 }
 
 input, select{
-  border: solid 1px black;
-  display:inline;
-}
-
-h3{
-  border: solid 1px black;
+  border: solid thin black;
 }
 
 .clear{
@@ -36,12 +31,8 @@ h2{
 
 a{
   text-decoration: none;
-  margin: 0;
-  padding: 0;
 }
 
 article{
-  display: block;
-  height: 100%;
   float: left;
 }

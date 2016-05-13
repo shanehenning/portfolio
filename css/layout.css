@@ -2,27 +2,17 @@
   z-index: 5;
   background-color: #fbeedb;
   padding-left: 5%;
-  /*padding-right: 5%;*/
-  height: 100%;
   position: relative;
-}
-
-.category label{
-  display: inline-block;
-  vertical-align: middle;
 }
 
 h1{
   position: relative;
   left: 40px;
-  margin: 0;
-  padding: 0;
   display: inline;
 }
 
 img{
   float: left;
-  display: block;
   margin: 4px 1.5vw .5vw 0;
   max-width: 100%;
 }
@@ -32,12 +22,8 @@ article{
 }
 
 article img{
-  width: 35%;
+  width: 40%;
   border: 1px solid black;
-}
-
-article a{
-  display: block;
 }
 
 article h5{
@@ -56,11 +42,11 @@ input{
 
 
 a:hover{
-  color: red;
+  color: maroon;
 }
 
 a:active{
-  color: maroon;
+  color: gray;
 }
 
 ul{
