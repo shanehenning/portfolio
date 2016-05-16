@@ -39,6 +39,13 @@ projectSelector.oneTab = function(){
   $('.navi a:first').click();
 };
 
+projectSelector.printIndexPage = function(){
+  Project.all.forEach(function(appendProject){
+    $('.select-option').append(appendProject.populateCategory());
+    $('.project-location').append(appendProject.printToPage());
+  });
+};
+
 $(document).ready(function(){
   projectSelector.handleCategory();
   projectSelector.showMore();
