@@ -1,4 +1,4 @@
-var projects = [];
+Project.all = [];
 
 function Project(details){
   for(key in details) this[key] = details[key];
@@ -17,18 +17,45 @@ Project.prototype.populateCategory = function(){
   return template(this);
 };
 
-allProjects.sort(function(a,b){
-  return (new Date(b.projectDate) - (new Date(a.projectDate)));
-});
+Project.loadAll = function(allProjects){
+  allProjects.sort(function(a,b){
+    return (new Date(b.projectDate) - (new Date(a.projectDate)));
+  });
+  allProjects.forEach(function(pushProject){
+    Project.all.push(new Project(pushProject));
+  });
+};
 
-allProjects.forEach(function(pushProject){
-  projects.push(new Project(pushProject));
-});
+Project.fetchAll = function(){
+  if (localStorage.projectData){
+    Project.loadAll(JSON.parse(localStorage.projectData));
+    projectSelector.printIndexPage();
+    // console.log('localStorage');
+  } else{
+    $.getJSON('../data/projectData.json', function(data,status,xhr){
+      // console.log(xhr.getResponseHeader('eTag'));
+      Project.loadAll(data);
+      localStorage.projectData = JSON.stringify(data);
+      localStorage.headerDigest = xhr.getResponseHeader('eTag');
+      console.log(localStorage.headerDigest);
+      projectSelector.printIndexPage();
+      // console.log('live-server');
+    });
+  }
+};
 
-projects.forEach(function(appendProject){
-  $('.select-option').append(appendProject.populateCategory());
-});
-
-projects.forEach(function(appendProject){
-  $('.project-location').append(appendProject.printToPage());
-});
+Project.fetchNew = function(){
+  $.ajax({
+    type: 'HEAD',
+    url: '../data/projectData.json',
+    success: function(data, status, xhr){
+      var newHead = xhr.getResponseHeader('eTag');
+      console.log(newHead);
+      if (newHead != localStorage.headerDigest){
+        localStorage.clear('headerDigest');
+        localStorage.clear('projectData');
+      }
+    }
+  });
+  Project.fetchAll();
+};
