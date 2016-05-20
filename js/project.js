@@ -9,7 +9,6 @@
   Project.prototype.printToPage = function(){
     var $handlebarsSource = $('#new-project-template').html();
     var template = Handlebars.compile($handlebarsSource);
-    // $('article').find('h5').html('Produced ' + (Math.round((new Date() - new Date(this.projectDate)) / 60 / 60 / 24 / 1000)) + ' days ago.');
     return template(this);
   };
 
@@ -32,15 +31,11 @@
   Project.fetchAll = function(){
     if (localStorage.projectData){
       Project.loadAll(JSON.parse(localStorage.projectData));
-      // console.log('localStorage');
     } else{
       $.getJSON('../data/projectData.json', function(data,status,xhr){
-        // console.log(xhr.getResponseHeader('eTag'));
         Project.loadAll(data);
         localStorage.projectData = JSON.stringify(data);
         localStorage.headerDigest = xhr.getResponseHeader('eTag');
-        // console.log(localStorage.headerDigest);
-        // console.log('live-server');
       });
     }
     projectSelector.printIndexPage();
@@ -52,7 +47,6 @@
       url: '../data/projectData.json',
       success: function(data, status, xhr){
         var newHead = xhr.getResponseHeader('eTag');
-        console.log(newHead);
         if (newHead != localStorage.headerDigest){
           localStorage.clear('headerDigest');
           localStorage.clear('projectData');
