@@ -26,8 +26,8 @@
       <header>
         <nav>
           <ul class="navi" id="navi">
-            <a class ="tab" title="Home" href="home"><li><img src="img/home.png"></img></li></a>
-            <a class="tab" title="About Me" href="about"><li><img src="img/about.png"></img></li></a>
+            <a class ="navi-selector" title="Home" href="/"><li><img src="img/home.png"></img></li></a>
+            <a class="navi-selector" title="About Me" href="/about"><li><img src="img/about.png"></img></li></a>
             <div class="pipe"><li> | </li></div>
             <a title="Github" href="https://github.com/shanehenning"><li><img src="img/github.png"></img></li></a>
             <a title="LinkedIn" href="https://www.linkedin.com/in/shane-henning-1a6909a9"><li><img src="img/linkedIn.gif"></li></a>
@@ -64,12 +64,12 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="js/projectData.js"></script>
-    <script src="js/project.js"></script>
-    <script src="js/hamburger.js"></script>
-    <script src="js/projectSelector.js"></script>
-    <script>
-    Project.fetchNew();
-    </script>
+    <script src="scripts/controller/page.js"></script>
+    <script src="scripts/model/project.js"></script>
+    <script src="scripts/controller/hamburger.js"></script>
+    <script src="scripts/view/projectSelector.js"></script>
+    <script src="scripts/controller/projectController.js"></script>
+    <script src="scripts/controller/aboutController.js"></script>
+    <script src="scripts/controller/routes.js"></script>
   </body>
 </html>

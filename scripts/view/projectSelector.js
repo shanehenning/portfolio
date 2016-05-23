@@ -28,7 +28,7 @@
   };
 
   projectSelector.oneTab = function(){
-    $('.navi').on('click', 'a', function(e){
+    $('.navi-selector').on('click', 'a', function(e){
       e.preventDefault();
       $('section').hide();
       var link = $(this).attr('href');
