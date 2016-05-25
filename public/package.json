@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Shane's Portfolio",
+  "engines": {
+    "node": "5.10.1"
+  },
+  "main": "web.js",
+  "scripts": {
+    "start": "node web.js"
+  },
+  "dependencies": {
+    "ejs": "2.4.2",
+    "express": "4.13.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shanehenning/portfolio"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
