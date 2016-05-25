@@ -4,16 +4,11 @@
   githubRepos.all = [];
 
   githubRepos.getRepos = function(callback){
-    $.ajax({
-      url: 'https://api.github.com/users/shanehenning/repos' +
-      '?sort=updated',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken},
-      success: function(data,message,xhr){
-        githubRepos.all = data;
-        callback();
-      }
-    });
+    $.get('/github/users/shanehenning/repos' +
+    '?sort=updated')
+    .done(function(data){
+      githubRepos.all = data;
+    }).done(callback);
   };
 
   githubRepos.with = function(attr){
