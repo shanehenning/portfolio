@@ -57,8 +57,12 @@ ul{
 li{
   list-style: none;
   display: inline-block;
-  padding: .2vw;
+  padding: 0;
   font-size: 12pt;
+}
+
+nav li{
+  padding: .2vw;
 }
 
 footer{
@@ -72,9 +76,5 @@ footer{
 }
 
 .github h4{
-  /*width: 100%;*/
   margin-bottom: 0px;
-  /*padding: 0;*/
-  /*display: inline;*/
-  /*color: red;*/
 }

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Shane's Portfolio",
   "engines": {
-    "node": "5.10.1"
+    "node": "5.10.1",
+    "npm": "3.8.3"
   },
   "main": "web.js",
   "scripts": {
