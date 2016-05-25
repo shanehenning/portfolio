@@ -1,0 +1,6 @@
+{
+  "name": "Portfolio",
+  "description": "Shane's Portfolio",
+  "repository": "https://github.com/shanehenning/portfolio",
+  "keywords": ["node", "express", "static"],
+}
