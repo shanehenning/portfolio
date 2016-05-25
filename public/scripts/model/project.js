@@ -38,6 +38,7 @@
         localStorage.headerDigest = xhr.getResponseHeader('eTag');
       });
     }
+    // if($(''))
     projectSelector.printIndexPage();
   };
 
