@@ -1,0 +1,80 @@
+#container{
+  z-index: 5;
+  background-color: #fbeedb;
+  padding-left: 5%;
+  position: relative;
+}
+
+h1{
+  position: relative;
+  left: 40px;
+  display: inline;
+}
+
+img{
+  float: left;
+  margin: 4px 1.5vw .5vw 0;
+  max-width: 100%;
+}
+
+article{
+  margin-bottom: 5%;
+}
+
+article img{
+  width: 40%;
+  border: 1px solid black;
+}
+
+article h5{
+  display: inline;
+  margin: 0;
+}
+
+article p{
+  margin: 0;
+}
+
+input{
+  float: right;
+  display: none;
+}
+
+
+a:hover{
+  color: maroon;
+}
+
+a:active{
+  color: gray;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+  padding: .2vw;
+  font-size: 12pt;
+}
+
+footer{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 9pt;
+}
+
+.about{
+  margin-bottom: 80px;
+}
+
+.github h4{
+  /*width: 100%;*/
+  margin-bottom: 0px;
+  /*padding: 0;*/
+  /*display: inline;*/
+  /*color: red;*/
+}
