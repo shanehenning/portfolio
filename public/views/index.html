@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/module.css">
+    <link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,300' rel='stylesheet' type='text/css'>
+    <script id="new-project-template" type="text/x-handlebars-template">
+      <article class="clear" data-category="{{category}}">
+        <h2 class="{{projectName}}">{{projectName}}</h2>
+        <a href="{{link}}">{{link}}</a>
+        <img src="{{image}}"></img>
+        <p>{{{description}}}</p>
+        <a>Show more>></a>
+      </article>
+    </script>
+    <script id="select-template" type="text/x-handlebars-template">
+      <option value ="{{category}}">{{category}}</option>
+    </script>
+    <script id="github-template" type="text/x-handlebars-template">
+      <li>
+        <a href={{html_url}} target="_blank"><h4>{{name}}</h4></a>
+        <p>Created on: {{formatDate created_at "realDate"}}</p>
+        <p>Language: {{language}}</p>
+      </li>
+    </script>
+  </head>
+  <body>
+      <header>
+        <nav>
+          <ul class="navi" id="navi">
+            <a class ="navi-selector" title="Home" href="/"><li><img src="img/home.png"></img></li></a>
+            <a class="navi-selector" title="About Me" href="/about"><li><img src="img/about.png"></img></li></a>
+            <div class="pipe"><li> | </li></div>
+            <a title="Github" href="https://github.com/shanehenning"><li><img src="img/github.png"></img></li></a>
+            <a title="LinkedIn" href="https://www.linkedin.com/in/shane-henning-1a6909a9"><li><img src="img/linkedIn.gif"></li></a>
+            <a title="Get Donuts!" href="https://www.thrillist.com/eat/seattle/best-donuts-in-seattle/3943227"><li><img src="img/donut.png"></li></a>
+          <ul>
+        </nav>
+      </header>
+      <div id="container">
+        <img src="img/head.png" class="head"></img>
+        <input type="checkbox" id="menu" class="menu" />
+        <label for="menu"></label>
+      <content>
+        <h1>Shane Henning</h1>
+        <section class="home">
+          <div class="category">
+            <label>Project Category:</label>
+            <select class="select-option">
+              <option value =""> -- Select a Category -- </option>
+            </select>
+          </div>
+          <div class="project-location">
+          </div>
+        </section>
+        <section class="about">
+          <h2>About Me</h2>
+            <p>Big Fan of Donuts</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </section>
+        <section class="github">
+          <h2>Github Repositories</h2>
+            <h4>Below is a list of repositories from GitHub for projects that I have created.</h4>
+        </section>
+      </content>
+      <footer class="clear">
+        <p>&copy 2016 Shane Henning</p>
+      </footer>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB0rPNkfAbJaPCUkCgeUMApfsNyBhtNAAs",
+        authDomain: "portfolio-3bf30.firebaseapp.com",
+        databaseURL: "https://portfolio-3bf30.firebaseio.com",
+        storageBucket: "portfolio-3bf30.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="scripts/model/moment.js"></script>
+    <script src="scripts/controller/page.js"></script>
+    <script src="scripts/model/githubToken.js"></script>
+    <script src="scripts/model/project.js"></script>
+    <script src="scripts/model/githubRepos.js"></script>
+    <script src="scripts/controller/hamburger.js"></script>
+    <script src="scripts/view/projectSelector.js"></script>
+    <script src="scripts/controller/projectController.js"></script>
+    <script src="scripts/controller/aboutController.js"></script>
+    <script src="scripts/controller/routes.js"></script>
+  </body>
+</html>

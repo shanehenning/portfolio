@@ -10,17 +10,24 @@
     "start": "node web.js"
   },
   "dependencies": {
-    "ejs": "2.4.2",
-    "express": "4.13.4"
+    "ejs": "^2.4.2",
+    "express": "^4.13.4",
+    "node": "0.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shanehenning/portfolio"
+    "url": "git+https://github.com/shanehenning/portfolio.git"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shanehenning/portfolio/issues"
+  },
+  "homepage": "https://github.com/shanehenning/portfolio#readme",
+  "devDependencies": {},
+  "author": ""
 }

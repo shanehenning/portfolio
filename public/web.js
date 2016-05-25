@@ -1,4 +1,7 @@
+// var node = require('node');
+// var ejs = require('ejs');
 var express = require('express');
+
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
@@ -7,7 +10,9 @@ app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
 app.set('public', __dirname + '/public');
-app.set('view engine', 'ejs');
+
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 app.get('/', function(request, response) {
   response.render('index');
